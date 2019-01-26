@@ -1,0 +1,40 @@
+.animal {
+  margin: 5px 0;
+  border-bottom: 1px solid lightgray;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.animal_name {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+}
+.animal__name--finished {
+  text-decoration: line-through;
+}
+.animal__btn {
+  padding: 5px;
+  border: none;
+  margin: 6px;
+  border-radius: 5px;
+  transition: 200ms;
+  color: white;
+  background-color: dimgrey;
+}
+
+.animal__btn:focus {
+  background-color: red;
+}
+
+btn--status {
+  background-color: darkslategray;
+}
+.animal__btn--remove {
+  background-color: red;
+}
+

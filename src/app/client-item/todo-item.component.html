@@ -1,0 +1,15 @@
+<div class="todo">
+  <div class="todo__name" >
+
+
+     <table style="width:100%;text-align:center">
+    <tr>name:
+<th>{{ todo.firstName }}</th><th>{{ todo.lastName }}</th> city:
+      <th>{{ todo.city }}</th> street: <th>{{ todo.street }}</th></tr></table>
+  </div>
+  <button class="todo__btn todo__btn--remove" (click)="removeTodo(todo.id)"> REMOVE </button>
+
+  <button class="todo__btn" (click)="editUser(todo)"> EDIT</button>
+
+</div>
+

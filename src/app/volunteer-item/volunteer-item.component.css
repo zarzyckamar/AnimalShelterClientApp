@@ -1,0 +1,23 @@
+.volunteer {
+  margin: 20px 0;
+  border-bottom: 1px solid lightgray;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: normal;
+  width: 50%;
+  margin: 0 auto;
+}
+.volunteer__name {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 400;
+}
+.volunteer__name--finished {
+  text-decoration: line-through;
+}
+
+.volunteer__btn--status {
+  background-color: darkslategray;
+}

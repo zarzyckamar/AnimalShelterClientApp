@@ -1,0 +1,6 @@
+<div class="volunteer-list">
+  <app-volunteer-item *ngFor="let volunteer_item of volunteers | paginate: {itemsPerPage: 2, currentPage: p" [volunteer]="volunteer_item" (removeVolunteer)="removeVolunteer($event)">
+  </app-volunteer-item>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+
