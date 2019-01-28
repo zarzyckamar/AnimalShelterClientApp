@@ -11,13 +11,18 @@ import {first} from "rxjs/operators";
   styleUrls: ['./client-edit.component.css']
 })
 export class ClientEditComponent implements OnInit {
+  firstName: string;
+  lastName: string;
+  city: string;
+  street: string;
+
 
   todo: Todo;
   editForm: FormGroup;
   constructor(private formBuilder: FormBuilder,private router: Router, private todoService: TodoService) { }
 
   ngOnInit() {
-    let id = localStorage.getItem("editUserId");
+/*    let id = localStorage.getItem("editUserId");
     if(!id) {
       alert("Invalid action.")
       this.router.navigate(['list-user']);
@@ -33,19 +38,12 @@ export class ClientEditComponent implements OnInit {
     this.todoService.getUserById(+id)
       .subscribe( data => {
         this.editForm.setValue(data);
-      });
+      });*/
   }
 
   onSubmit() {
     this.todoService.updateUser(this.editForm.value)
-      .pipe(first())
-      .subscribe(
-        data => {
-          this.router.navigate(['list-user']);
-        },
-        error => {
-          alert(error);
-        });
+
   }
 
 }

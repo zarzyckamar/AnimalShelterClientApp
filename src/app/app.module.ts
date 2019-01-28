@@ -4,8 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import {NgxPaginationModule} from 'ngx-pagination';
 
+import {NgxPaginationModule} from 'ngx-pagination';
 
 //client
 import { ClientsListComponent } from './clients-list/clients-list.component';
@@ -38,8 +38,7 @@ const ROUTES: Routes = [
 
 @NgModule({
   declarations: [AppComponent, ClientsListComponent,AnimalItemComponent,ClientEditComponent,  AnimalsListComponent, TodoItemComponent, AddClientComponent,VolunteerItemComponent ,VolunteersListComponent],
-  imports: [BrowserModule, NgxPaginationModule, HttpClientModule, FormsModule, RouterModule.forRoot(ROUTES)],
-  exports: [NgxPaginationModule],
+  imports: [BrowserModule, HttpClientModule, FormsModule,NgxPaginationModule,  RouterModule.forRoot(ROUTES)],
   providers: [TodoService, VolunteerService, AnimalService],
   bootstrap: [AppComponent]
 })

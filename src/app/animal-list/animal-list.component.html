@@ -1,5 +1,8 @@
 <div class="animal-list">
-  <app-animal-item *ngFor="let animal_item of animals" [animal]="animal_item">
+  <app-animal-item *ngFor="let animal_item of animals | paginate: { itemsPerPage: 3, currentPage: p }" [animal]="animal_item">
   </app-animal-item>
+
+
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>
 
